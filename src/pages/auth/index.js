@@ -15,8 +15,11 @@ export default function auth() {
         }),
         Button({
           children:"ادامه",
-          className:"my-6"
+          className:"my-6 hidden"
         }),
+        Button({
+          children:"ثبت",
+        })
     ],
   })) 
 }

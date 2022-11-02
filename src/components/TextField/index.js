@@ -1,7 +1,6 @@
 import Box from "../box";
 
 function TextField(params) {
-  console.log(params);
   const textField = Box({
     Element: "input",
     className:
@@ -9,8 +8,7 @@ function TextField(params) {
   });
 // baghie attribuit haye HTMl ro taht onvane yek object be component textFeild midim
   Object.keys(params).map((key) => {
-    textField[key] = params[key];
-  
+    textField[key] = params[key]
 });
   return textField
 }

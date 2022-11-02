@@ -10,7 +10,7 @@ export default function Box(params) {
       box.append(child);
     });
   }
-//   در غیر این صورت از طریق اینر اچتی ام ال بخوم
+//  در غیر این صورت از طریق اینر اچتی ام ال بخون
    else box.innerHTML = children || "";
   return box;
 }
