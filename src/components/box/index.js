@@ -3,14 +3,18 @@ export default function Box(params) {
 
   const box = document.createElement(Element || "div");
   box.className = className || "";
-//   arry.isarray چک میکنه ببینه آرایه هست یا نه
+  Object.keys(params).map((key) => {
+    if (key === "Element" || key === "children") return null; 
+    box[key] = params[key];
+  });
+  //   arry.isarray چک میکنه ببینه آرایه هست یا نه
   if (Array.isArray(children)) {
-    // چه آرایه برگشت و یا غیر از آرایه برگشت شما در آن حلقه میزنی و به فانکشن باکس اپند میکنی 
+    // چه آرایه برگشت و یا غیر از آرایه برگشت شما در آن حلقه میزنی و به فانکشن باکس اپند میکنی
     children.map((child) => {
       box.append(child);
     });
   }
-//  در غیر این صورت از طریق اینر اچتی ام ال بخون
-   else box.innerHTML = children || "";
+  //  در غیر این صورت از طریق اینر اچتی ام ال بخون
+  else box.innerHTML = children || "";
   return box;
 }
